@@ -114,3 +114,68 @@ canvas#confetti {
     transform: translateY(-20px); /* Bounce effect */
   }
 }
+/* Media Query for devices with a max width of 768px (tablets and smaller) */
+@media (max-width: 768px) {
+  .hero {
+    padding: 1rem; /* Reduce padding */
+  }
+
+  .animated-title {
+    font-size: 2.5rem; /* Smaller font size */
+  }
+
+  .message {
+    font-size: 1rem; /* Smaller font size */
+    margin: 0.5rem auto; /* Adjust margin */
+  }
+
+  .slideshow-container {
+    height: auto; /* Allow height to be auto */
+  }
+
+  .slide {
+    height: 300px; /* Smaller height for images */
+  }
+
+  .prev,
+  .next {
+    padding: 12px; /* Smaller button padding */
+    font-size: 16px; /* Smaller font size */
+  }
+
+  /* Adjust iframe size */
+  .music-section iframe {
+    width: 100%; /* Full width for iframe */
+    height: auto; /* Auto height */
+  }
+
+  /* Adjust the confetti canvas */
+  canvas#confetti {
+    height: 100%; /* Full height for canvas */
+  }
+}
+
+/* Media Query for devices with a max width of 480px (mobile phones) */
+@media (max-width: 480px) {
+  .animated-title {
+    font-size: 2rem; /* Further reduce font size */
+  }
+
+  .message {
+    font-size: 0.9rem; /* Even smaller font size */
+  }
+
+  .slideshow-container {
+    height: auto; /* Allow height to be auto */
+  }
+
+  .slide {
+    height: 250px; /* Further reduce height for images */
+  }
+
+  .prev,
+  .next {
+    padding: 10px; /* Even smaller button padding */
+    font-size: 14px; /* Smaller font size */
+  }
+}
