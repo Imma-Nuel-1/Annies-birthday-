@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #ffe6f7; /* Light pink */
+  color: #6b2e8a; /* Deep purple */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+}
+
+.animated-title {
+  font-size: 3rem;
+  animation: fadeIn 2s ease-in-out;
+  color: #ff85b3; /* Pastel pink */
+}
+
+.message {
+  font-size: 1.2rem;
+  margin: 1rem auto;
+  max-width: 700px; /* Adjusted for better readability */
+}
+
+/* Slideshow styles */
+.slideshow-container {
+  position: relative;
+  max-width: 100%; /* Full width */
+  margin: auto; /* Center the slideshow */
+}
+
+.slideshow {
+  position: relative;
+  display: flex; /* Use flexbox for horizontal alignment */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Enable snapping */
+}
+
+.slide {
+  min-width: 100%; /* Ensure each slide takes full width */
+  height: 400px; /* Fixed height */
+  object-fit: contain; /* Cover the area */
+  scroll-snap-align: center; /* Center the slide in the viewport */
+  transition: transform 0.5s ease; /* Smooth transition */
+}
+
+/* Navigation buttons */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  transform: translateY(-50%);
+  font-size: 18px;
+  border-radius: 5px;
+  z-index: 10; /* Ensure buttons are above images */
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.music-section {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+/* Confetti animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+canvas#confetti {
+  position: fixed; /* Fix it to the viewport */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  pointer-events: none; /* Allow clicks to pass through */
+  z-index: 999; /* Ensure it’s above other content */
+  opacity: 0.7; /* Slight transparency for a softer look */
+}
+
+/* Add love emojis */
+.love {
+  font-size: 2rem; /* Larger size for love emojis */
+  color: #ff6f61; /* Romantic color */
+  position: fixed; /* Fixed positioning */
+  z-index: 998; /* Below confetti but above other content */
+  animation: bounce 2s infinite; /* Bouncing effect */
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Bounce effect */
+  }
+}
